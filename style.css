@@ -49,10 +49,62 @@ section h2 {
   width: 27rem;
   padding: 1.6rem;
   border-radius: 0.8rem;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
 }
 
-.money-wrapper:hover {
+.money-wrapper:hover,
+.money-wrapper:has(:focus) {
   outline: 0.25rem solid #7c3aed;
+}
+
+.amount {
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  color: #333;
+  width: 50%;
+  outline: none;
+}
+
+/* DROPDOWN */
+.dropdown {
+  width: 12.4rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  border-radius: 0 0.8rem 0.8rem 0;
+
+  padding: 1.6rem;
+}
+
+.selected::before {
+  content: "";
+}
+
+.selected::after {
+  content: "";
+}
+
+.selected:hover {
+  background-color: #ede9fe;
+}
+
+.fi.fis {
+  font-size: 2.4rem;
+  border-radius: 50%;
 }
 
 .currency .wrapper {
