@@ -88,14 +88,23 @@ section h2 {
   border-radius: 0 0.8rem 0.8rem 0;
 
   padding: 1.6rem;
+
+  cursor: pointer;
 }
 
 .selected::before {
   content: "";
+  height: 2.4rem;
+  width: 0.1rem;
+  background-color: #94a3b8;
+  padding-right: 1.6rem;
 }
 
 .selected::after {
   content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(./assets/chevron-down.svg) no-repeat;
 }
 
 .selected:hover {
