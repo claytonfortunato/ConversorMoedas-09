@@ -20,8 +20,6 @@ body {
 }
 
 main {
-  width: 80rem;
-  height: 69.2rem;
   padding: 6.4rem 8rem;
   background-color: #fff;
   box-shadow: 0rem 0.4rem 3.2rem rgba(15, 23, 42, 0.15);
@@ -42,6 +40,7 @@ section h2 {
   gap: 1.6rem;
 }
 
+/* MONEY-WRAPPER*/
 .money-wrapper {
   background-color: #fff;
   outline: 0.1rem solid #94a3b8;
@@ -124,6 +123,10 @@ li:hover {
 .fi.fis {
   font-size: 2.4rem;
   border-radius: 50%;
+}
+
+.middle img {
+  width: 20px;
 }
 
 /* UL */
