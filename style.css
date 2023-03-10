@@ -157,11 +157,8 @@ li {
   cursor: pointer;
 }
 
+/*CAMBIO*/
+
 .currency .wrapper {
   margin-top: 2.4rem;
-
-  width: 59.2rem;
-  height: 35.6rem;
-
-  border: 0.1rem solid red;
 }
