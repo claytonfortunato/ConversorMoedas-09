@@ -13,11 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500;1,600&display=swap"
       rel="stylesheet"
     />
-    <!-- Bandeira -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
-    />
   </head>
   <body>
     <main>
@@ -25,65 +20,13 @@
         <h2>Conversor de moedas</h2>
         <div class="wrapper">
           <div class="money-wrapper">
-            <input type="text" class="amount" value="$1.000" />
-
-            <div class="dropdown">
-              <div class="selected">
-                <span class="fi fi-us fis"></span>
-                USD
-              </div>
-
-              <ul>
-                <li>
-                  <span class="fi fi-br fis"></span>
-                  BRL
-                </li>
-                <li>
-                  <span class="fi fi-us fis"></span>
-                  USD
-                </li>
-                <li>
-                  <span class="fi fi-eu fis"></span>
-                  EUR
-                </li>
-                <li>
-                  <span class="fi fi-gb fis"></span>
-                  GBP
-                </li>
-              </ul>
-            </div>
+            <select data-js="currency-one" class="from-select"></select>
           </div>
           <div class="middle">
             <img src="./assets/arrows.png" alt="trocar moedas" />
           </div>
           <div class="money-wrapper">
-            <input readonly type="text" class="amount" value="R$ 5.000,20" />
-
-            <div class="dropdown">
-              <div class="selected">
-                <span class="fi fi-br fis"></span>
-                BRL
-              </div>
-
-              <ul>
-                <li>
-                  <span class="fi fi-br fis"></span>
-                  BRL
-                </li>
-                <li>
-                  <span class="fi fi-us fis"></span>
-                  USD
-                </li>
-                <li>
-                  <span class="fi fi-eu fis"></span>
-                  EUR
-                </li>
-                <li>
-                  <span class="fi fi-gb fis"></span>
-                  GBP
-                </li>
-              </ul>
-            </div>
+            <select data-js="currency-two" class="from-select"></select>
           </div>
         </div>
       </section>

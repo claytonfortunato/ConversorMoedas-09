@@ -109,7 +109,39 @@ const currencyTwoEl = document.querySelector('[data-js="currency-two');
 const url =
   "https://v6.exchangerate-api.com/v6/578bdb307639a212ba04aedd/latest/USD";
 
-const option = `<option></option>`;
+const fetchEnchangeRate = async () => {
+  try {
+    const response = await fetch(url);
 
-currencyOneEl.innerHTML = option;
-currencyTwoEl.innerHTML = option;
+    if (!response.ok) {
+      throw new Error(
+        "Sua conexão falhou. Não foi possível obter as informações."
+      );
+    }
+
+    const enchangeRateData = await response.json();
+
+    if (enchangeRateData.result === "error") {
+      throw new Error(getErrormessage(enchangeRateData["error-type"]));
+    }
+  } catch (err) {
+    alert(err.message);
+  }
+};
+
+fetchEnchangeRate();
+
+const init = async () => {
+  const enchangeRateData = await fetchEnchangeRate();
+
+  const options = Object.keys(enchangeRateData.conversion_rates)
+    .map((currency) => `<options> ${currency} </options>`)
+    .join("");
+
+  console.log(options);
+
+  currencyOneEl.innerHTML = options;
+  currencyTwoEl.innerHTML = options;
+};
+
+init();
