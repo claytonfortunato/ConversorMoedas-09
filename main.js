@@ -125,23 +125,48 @@ const fetchEnchangeRate = async () => {
       throw new Error(getErrormessage(enchangeRateData["error-type"]));
     }
   } catch (err) {
-    alert(err.message);
+    const div = document.createElement("div");
+    const button = document.createElement("button");
+
+    div.textContent = err.message;
+    div.classList.add(
+      "alert",
+      "alert-warning",
+      "alert-dismissible",
+      "fade",
+      "show"
+    );
+    div.setAttribute("role", "alert");
+    button.classList.add("btn-close");
+    button.setAttribute("type", "button");
+    button.setAttribute("Atrribute", "Close");
+
+    button.addEventListener("click", () => {
+      div.remove();
+    });
+
+    div.appendChild(button);
+    currenciesEl.insertAdjacentElement("afterend", div);
   }
 };
-
-fetchEnchangeRate();
 
 const init = async () => {
   const enchangeRateData = await fetchEnchangeRate();
 
-  const options = Object.keys(enchangeRateData.conversion_rates)
-    .map((currency) => `<options> ${currency} </options>`)
-    .join("");
+  const getOptions = (selectedCurrency) =>
+    Object.keys(enchangeRateData.conversion_rates)
+      .map(
+        (currency) =>
+          `<options ${
+            currency === selectedCurrency ? "selected" : ""
+          }> ${currency} </options>`
+      )
+      .join("");
 
-  console.log(options);
+  console.log(getOptions);
 
-  currencyOneEl.innerHTML = options;
-  currencyTwoEl.innerHTML = options;
+  currencyOneEl.innerHTML = getOptions;
+  currencyTwoEl.innerHTML = getOptions;
 };
 
 init();
