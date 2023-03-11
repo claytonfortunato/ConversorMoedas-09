@@ -105,6 +105,7 @@ chart.render();
 // currencyAPI
 const currencyOneEl = document.querySelector('[data-js="currency-one');
 const currencyTwoEl = document.querySelector('[data-js="currency-two');
+const currenciesEl = document.querySelector(".money-wrapper");
 
 const url =
   "https://v6.exchangerate-api.com/v6/578bdb307639a212ba04aedd/latest/USD";
