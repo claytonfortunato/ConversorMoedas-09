@@ -39,6 +39,7 @@ O projeto simula um conversor de moedas simples.
 
 ## 🔖 Layout
 
+Você pode visualizar o layout do projeto através [Figma](https://www.figma.com/community/file/1212757179376046656/%23boraCodar---Desafio-9)
  
 
 ## :memo: Licença
