@@ -23,6 +23,7 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
   
 ## 👾 Deploy
 
+[Conversor de Moedas] (https://conversor-moedas-09.vercel.app/)
 
 ## 🚀 Tecnologias
 
